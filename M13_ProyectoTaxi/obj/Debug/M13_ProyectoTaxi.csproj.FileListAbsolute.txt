@@ -1,0 +1,20 @@
+E:\M13_ProyectoTaxi\M13_ProyectoTaxi\bin\Debug\M13_ProyectoTaxi.exe.config
+E:\M13_ProyectoTaxi\M13_ProyectoTaxi\bin\Debug\M13_ProyectoTaxi.exe
+E:\M13_ProyectoTaxi\M13_ProyectoTaxi\bin\Debug\M13_ProyectoTaxi.pdb
+E:\M13_ProyectoTaxi\M13_ProyectoTaxi\bin\Debug\EntityFramework.dll
+E:\M13_ProyectoTaxi\M13_ProyectoTaxi\bin\Debug\EntityFramework.SqlServer.dll
+E:\M13_ProyectoTaxi\M13_ProyectoTaxi\bin\Debug\EntityFramework.xml
+E:\M13_ProyectoTaxi\M13_ProyectoTaxi\bin\Debug\EntityFramework.SqlServer.xml
+E:\M13_ProyectoTaxi\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.csprojResolveAssemblyReference.cache
+E:\M13_ProyectoTaxi\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.Forms.LoginForm.resources
+E:\M13_ProyectoTaxi\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.Properties.Resources.resources
+E:\M13_ProyectoTaxi\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.csproj.GenerateResource.Cache
+E:\M13_ProyectoTaxi\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.exe
+E:\M13_ProyectoTaxi\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.pdb
+E:\M13_ProyectoTaxi\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.Forms.Tareas.TareasForm.resources
+J:\M13_ProyectoTaxi\M13_ProyectoTaxi\bin\Debug\M13_ProyectoTaxi.exe.config
+J:\M13_ProyectoTaxi\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.exe
+J:\M13_ProyectoTaxi\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.pdb
+C:\Users\Alex\Documents\Visual Studio 2015\Projects\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\bin\Debug\M13_ProyectoTaxi.exe.config
+C:\Users\Alex\Documents\Visual Studio 2015\Projects\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.exe
+C:\Users\Alex\Documents\Visual Studio 2015\Projects\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.pdb

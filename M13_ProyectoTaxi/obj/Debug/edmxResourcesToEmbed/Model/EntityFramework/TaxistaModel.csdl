@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBBTaxistesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Coche">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="matricula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="kms" Type="Int32" />
+    <NavigationProperty Name="Taxista" Relationship="Self.FK_Taxista_Coche" FromRole="Coche" ToRole="Taxista" />
+  </EntityType>
+  <EntityType Name="Tarea">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fechaAsignacion" Type="DateTime" Precision="3" />
+    <Property Name="fechaRecogida" Type="DateTime" Precision="3" />
+    <Property Name="fechaCompletada" Type="DateTime" Precision="3" />
+    <Property Name="FK_TaxistaId" Type="Int32" />
+    <Property Name="FK_ZonaId" Type="Int32" />
+    <NavigationProperty Name="Taxista" Relationship="Self.FK_TaxistaId" FromRole="Tarea" ToRole="Taxista" />
+    <NavigationProperty Name="Zona" Relationship="Self.FK_Zona" FromRole="Tarea" ToRole="Zona" />
+  </EntityType>
+  <EntityType Name="TareaLog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idTarea" Type="Int32" />
+    <Property Name="op" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="fecha" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Taxista">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dni" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fechaNacimiento" Type="DateTime" Precision="0" />
+    <Property Name="horaEntrada" Type="Time" Precision="0" />
+    <Property Name="horaSalida" Type="Time" Precision="0" />
+    <Property Name="FK_CocheId" Type="Int32" />
+    <Property Name="FK_ZonaId" Type="Int32" />
+    <NavigationProperty Name="Coche" Relationship="Self.FK_Taxista_Coche" FromRole="Taxista" ToRole="Coche" />
+    <NavigationProperty Name="Tarea" Relationship="Self.FK_TaxistaId" FromRole="Taxista" ToRole="Tarea" />
+    <NavigationProperty Name="Zona" Relationship="Self.FK_Taxista_Zona" FromRole="Taxista" ToRole="Zona" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="apellidos" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dni" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fechaNacimiento" Type="DateTime" Precision="0" />
+    <Property Name="horaEntrada" Type="Time" Precision="0" />
+    <Property Name="horaSalida" Type="Time" Precision="0" />
+  </EntityType>
+  <EntityType Name="Zona">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ciudad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Tarea" Relationship="Self.FK_Zona" FromRole="Zona" ToRole="Tarea" />
+    <NavigationProperty Name="Taxista" Relationship="Self.FK_Taxista_Zona" FromRole="Zona" ToRole="Taxista" />
+  </EntityType>
+  <Association Name="FK_Taxista_Coche">
+    <End Role="Coche" Type="Self.Coche" Multiplicity="0..1" />
+    <End Role="Taxista" Type="Self.Taxista" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Coche">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Taxista">
+        <PropertyRef Name="FK_CocheId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TaxistaId">
+    <End Role="Taxista" Type="Self.Taxista" Multiplicity="0..1" />
+    <End Role="Tarea" Type="Self.Tarea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Taxista">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Tarea">
+        <PropertyRef Name="FK_TaxistaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zona">
+    <End Role="Zona" Type="Self.Zona" Multiplicity="0..1" />
+    <End Role="Tarea" Type="Self.Tarea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zona">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Tarea">
+        <PropertyRef Name="FK_ZonaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Taxista_Zona">
+    <End Role="Zona" Type="Self.Zona" Multiplicity="0..1" />
+    <End Role="Taxista" Type="Self.Taxista" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zona">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Taxista">
+        <PropertyRef Name="FK_ZonaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBBTaxistesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Coche" EntityType="Self.Coche" />
+    <EntitySet Name="Tarea" EntityType="Self.Tarea" />
+    <EntitySet Name="TareaLog" EntityType="Self.TareaLog" />
+    <EntitySet Name="Taxista" EntityType="Self.Taxista" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <EntitySet Name="Zona" EntityType="Self.Zona" />
+    <AssociationSet Name="FK_Taxista_Coche" Association="Self.FK_Taxista_Coche">
+      <End Role="Coche" EntitySet="Coche" />
+      <End Role="Taxista" EntitySet="Taxista" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TaxistaId" Association="Self.FK_TaxistaId">
+      <End Role="Taxista" EntitySet="Taxista" />
+      <End Role="Tarea" EntitySet="Tarea" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zona" Association="Self.FK_Zona">
+      <End Role="Zona" EntitySet="Zona" />
+      <End Role="Tarea" EntitySet="Tarea" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Taxista_Zona" Association="Self.FK_Taxista_Zona">
+      <End Role="Zona" EntitySet="Zona" />
+      <End Role="Taxista" EntitySet="Taxista" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

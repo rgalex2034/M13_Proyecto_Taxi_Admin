@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBBTaxistesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Coche">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="matricula" Type="varchar" MaxLength="50" />
+    <Property Name="kms" Type="int" />
+  </EntityType>
+  <EntityType Name="Tarea">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="telefono" Type="varchar" MaxLength="50" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="direccion" Type="varchar" MaxLength="50" />
+    <Property Name="fechaAsignacion" Type="datetime" />
+    <Property Name="fechaRecogida" Type="datetime" />
+    <Property Name="fechaCompletada" Type="datetime" />
+    <Property Name="FK_TaxistaId" Type="int" />
+    <Property Name="FK_ZonaId" Type="int" />
+  </EntityType>
+  <EntityType Name="TareaLog">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idTarea" Type="int" />
+    <Property Name="op" Type="varchar" MaxLength="10" />
+    <Property Name="fecha" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Taxista">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="20" />
+    <Property Name="apellidos" Type="varchar" MaxLength="50" />
+    <Property Name="telefono" Type="varchar" MaxLength="50" />
+    <Property Name="dni" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="fechaNacimiento" Type="date" />
+    <Property Name="horaEntrada" Type="time" Precision="0" />
+    <Property Name="horaSalida" Type="time" Precision="0" />
+    <Property Name="FK_CocheId" Type="int" />
+    <Property Name="FK_ZonaId" Type="int" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+    <Property Name="password" Type="varchar" MaxLength="20" />
+    <Property Name="apellidos" Type="varchar" MaxLength="50" />
+    <Property Name="telefono" Type="varchar" MaxLength="50" />
+    <Property Name="dni" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="fechaNacimiento" Type="date" />
+    <Property Name="horaEntrada" Type="time" Precision="0" />
+    <Property Name="horaSalida" Type="time" Precision="0" />
+  </EntityType>
+  <EntityType Name="Zona">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ciudad" Type="varchar" MaxLength="50" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_Taxista_Coche">
+    <End Role="Coche" Type="Self.Coche" Multiplicity="0..1" />
+    <End Role="Taxista" Type="Self.Taxista" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Coche">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Taxista">
+        <PropertyRef Name="FK_CocheId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Taxista_Zona">
+    <End Role="Zona" Type="Self.Zona" Multiplicity="0..1" />
+    <End Role="Taxista" Type="Self.Taxista" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zona">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Taxista">
+        <PropertyRef Name="FK_ZonaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TaxistaId">
+    <End Role="Taxista" Type="Self.Taxista" Multiplicity="0..1" />
+    <End Role="Tarea" Type="Self.Tarea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Taxista">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Tarea">
+        <PropertyRef Name="FK_TaxistaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Zona">
+    <End Role="Zona" Type="Self.Zona" Multiplicity="0..1" />
+    <End Role="Tarea" Type="Self.Tarea" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zona">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Tarea">
+        <PropertyRef Name="FK_ZonaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBBTaxistesModelStoreContainer">
+    <EntitySet Name="Coche" EntityType="Self.Coche" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tarea" EntityType="Self.Tarea" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TareaLog" EntityType="Self.TareaLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Taxista" EntityType="Self.Taxista" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Zona" EntityType="Self.Zona" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Taxista_Coche" Association="Self.FK_Taxista_Coche">
+      <End Role="Coche" EntitySet="Coche" />
+      <End Role="Taxista" EntitySet="Taxista" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Taxista_Zona" Association="Self.FK_Taxista_Zona">
+      <End Role="Zona" EntitySet="Zona" />
+      <End Role="Taxista" EntitySet="Taxista" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TaxistaId" Association="Self.FK_TaxistaId">
+      <End Role="Taxista" EntitySet="Taxista" />
+      <End Role="Tarea" EntitySet="Tarea" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Zona" Association="Self.FK_Zona">
+      <End Role="Zona" EntitySet="Zona" />
+      <End Role="Tarea" EntitySet="Tarea" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

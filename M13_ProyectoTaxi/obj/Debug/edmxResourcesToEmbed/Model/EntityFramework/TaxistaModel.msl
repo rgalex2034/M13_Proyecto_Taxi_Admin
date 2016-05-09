@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBBTaxistesModelStoreContainer" CdmEntityContainer="DBBTaxistesEntities">
+    <EntitySetMapping Name="Coche">
+      <EntityTypeMapping TypeName="DBBTaxistesModel.Coche">
+        <MappingFragment StoreEntitySet="Coche">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="matricula" ColumnName="matricula" />
+          <ScalarProperty Name="kms" ColumnName="kms" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tarea">
+      <EntityTypeMapping TypeName="DBBTaxistesModel.Tarea">
+        <MappingFragment StoreEntitySet="Tarea">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="fechaAsignacion" ColumnName="fechaAsignacion" />
+          <ScalarProperty Name="fechaRecogida" ColumnName="fechaRecogida" />
+          <ScalarProperty Name="fechaCompletada" ColumnName="fechaCompletada" />
+          <ScalarProperty Name="FK_TaxistaId" ColumnName="FK_TaxistaId" />
+          <ScalarProperty Name="FK_ZonaId" ColumnName="FK_ZonaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TareaLog">
+      <EntityTypeMapping TypeName="DBBTaxistesModel.TareaLog">
+        <MappingFragment StoreEntitySet="TareaLog">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idTarea" ColumnName="idTarea" />
+          <ScalarProperty Name="op" ColumnName="op" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Taxista">
+      <EntityTypeMapping TypeName="DBBTaxistesModel.Taxista">
+        <MappingFragment StoreEntitySet="Taxista">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="dni" ColumnName="dni" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="horaEntrada" ColumnName="horaEntrada" />
+          <ScalarProperty Name="horaSalida" ColumnName="horaSalida" />
+          <ScalarProperty Name="FK_CocheId" ColumnName="FK_CocheId" />
+          <ScalarProperty Name="FK_ZonaId" ColumnName="FK_ZonaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="DBBTaxistesModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="apellidos" ColumnName="apellidos" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="dni" ColumnName="dni" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="fechaNacimiento" ColumnName="fechaNacimiento" />
+          <ScalarProperty Name="horaEntrada" ColumnName="horaEntrada" />
+          <ScalarProperty Name="horaSalida" ColumnName="horaSalida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zona">
+      <EntityTypeMapping TypeName="DBBTaxistesModel.Zona">
+        <MappingFragment StoreEntitySet="Zona">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
