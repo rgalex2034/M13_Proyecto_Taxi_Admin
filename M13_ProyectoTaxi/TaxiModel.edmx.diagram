@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a779203156ca45cab643b60cdc4893ad" Name="Diagram1" ZoomLevel="72">
+        <EntityTypeShape EntityType="DBBTaxistesModel.Coche" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBBTaxistesModel.Tarea" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBBTaxistesModel.Taxista" Width="1.5" PointX="6" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBBTaxistesModel.Usuario" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBBTaxistesModel.Zona" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <AssociationConnector Association="DBBTaxistesModel.FK_Taxista_Coche" ManuallyRouted="false" />
+        <AssociationConnector Association="DBBTaxistesModel.FK_TaxistaId" ManuallyRouted="false" />
+        <AssociationConnector Association="DBBTaxistesModel.FK_Zona" ManuallyRouted="false" />
+        <AssociationConnector Association="DBBTaxistesModel.FK_Taxista_Zona" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
