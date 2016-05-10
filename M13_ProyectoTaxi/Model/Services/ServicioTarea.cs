@@ -16,6 +16,12 @@ namespace M13_ProyectoTaxi.Model.Services
             return dao.obtenerListaTarea();
         }
 
+        public static Tarea obtenerTarea(int id)
+        {
+            TareaDAO dao = new TareaDAO();
+            return dao.obtenerTarea(id);
+        }
+
         public static int addTarea(Tarea t)
         {
             TareaDAO dao = new TareaDAO();
@@ -45,5 +51,23 @@ namespace M13_ProyectoTaxi.Model.Services
             return dao.borrarTarea(id);
         }
 
+        /**
+        * actualiza los datos administrativos de la tarea
+        */
+        public static bool actualizarTarea(int id, Tarea tarea) {
+            TareaDAO dao = new TareaDAO();
+            Tarea t = dao.obtenerTarea(id);
+            if (t != null)
+            {
+                t.direccion = tarea.direccion;
+                t.FK_ZonaId = tarea.FK_ZonaId;
+                t.nombre = tarea.nombre;
+                t.telefono = tarea.telefono;
+                dao.guardarCambios();
+                return true;
+            }
+            else return false;
+
+        }
     }
 }

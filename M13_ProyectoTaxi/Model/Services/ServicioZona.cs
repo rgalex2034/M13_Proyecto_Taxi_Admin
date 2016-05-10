@@ -36,6 +36,10 @@ namespace M13_ProyectoTaxi.Model.Services
             Zona zona = dao.obtenerZonaPorNombre(nombre);
             return zona;
         }
-
+        public static Zona obtenerZona(int id) {
+            ZonaDAO dao = new ZonaDAO();
+            Zona zona = dao.obtenerZona(id);
+            return zona;
+        }
     }
 }

@@ -142,6 +142,7 @@
             this.Controls.Add(this.label1);
             this.Name = "NewTareaForm";
             this.Text = "NewTareaForm";
+            this.Load += new System.EventHandler(this.NewTareaForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

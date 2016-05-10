@@ -28,3 +28,18 @@ C:\Users\lo\Documents\Visual Studio 2015\Projects\M13_ProyectoTaxi\M13_ProyectoT
 C:\Users\lo\Documents\Visual Studio 2015\Projects\M13_ProyectoTaxi\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.Forms.Tareas.TareasForm.resources
 C:\Users\lo\Documents\Visual Studio 2015\Projects\M13_ProyectoTaxi\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.Properties.Resources.resources
 C:\Users\lo\Documents\Visual Studio 2015\Projects\M13_ProyectoTaxi\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.csproj.GenerateResource.Cache
+C:\Users\CarinaCalcina\Documents\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\bin\Debug\M13_ProyectoTaxi.exe.config
+C:\Users\CarinaCalcina\Documents\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.exe
+C:\Users\CarinaCalcina\Documents\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.pdb
+C:\Users\CarinaCalcina\Documents\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\bin\Debug\M13_ProyectoTaxi.exe
+C:\Users\CarinaCalcina\Documents\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\bin\Debug\M13_ProyectoTaxi.pdb
+C:\Users\CarinaCalcina\Documents\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\bin\Debug\EntityFramework.dll
+C:\Users\CarinaCalcina\Documents\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\CarinaCalcina\Documents\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\bin\Debug\EntityFramework.xml
+C:\Users\CarinaCalcina\Documents\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CarinaCalcina\Documents\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.csprojResolveAssemblyReference.cache
+C:\Users\CarinaCalcina\Documents\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.Forms.LoginForm.resources
+C:\Users\CarinaCalcina\Documents\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.Forms.Tareas.NewTareaForm.resources
+C:\Users\CarinaCalcina\Documents\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.Forms.Tareas.TareasForm.resources
+C:\Users\CarinaCalcina\Documents\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.Properties.Resources.resources
+C:\Users\CarinaCalcina\Documents\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.csproj.GenerateResource.Cache

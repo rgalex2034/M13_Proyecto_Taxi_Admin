@@ -53,6 +53,7 @@
             this.btnUpdTarea.TabIndex = 1;
             this.btnUpdTarea.Text = "Actualizar";
             this.btnUpdTarea.UseVisualStyleBackColor = true;
+            this.btnUpdTarea.Click += new System.EventHandler(this.btnUpdTarea_Click);
             // 
             // btnDelTarea
             // 

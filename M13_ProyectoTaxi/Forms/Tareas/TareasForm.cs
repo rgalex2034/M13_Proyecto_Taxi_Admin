@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using M13_ProyectoTaxi.Model.Services;
+using M13_ProyectoTaxi.Model.EntityFramework;
 
 namespace M13_ProyectoTaxi.Forms.Tareas
 {
@@ -58,6 +59,28 @@ namespace M13_ProyectoTaxi.Forms.Tareas
 
             refreshTareas();
 
+        }
+
+        private void btnUpdTarea_Click(object sender, EventArgs e)
+        {
+            if (dgvTarea.SelectedRows.Count == 1)
+            {
+                int idTarea = -1;
+                foreach(DataGridViewRow row in dgvTarea.SelectedRows)
+                {
+                    foreach(DataGridViewCell cell in row.Cells)
+                    {
+                        idTarea = (int)cell.Value;
+                        break;
+                    }
+                }
+                Tarea t = ServicioTarea.obtenerTarea(idTarea);
+
+                NewTareaForm updForm = new NewTareaForm(t);
+                updForm.FormClosed += NewTareaClosed;
+                updForm.ShowDialog();
+
+            }
         }
     }
 }
