@@ -43,6 +43,7 @@
             this.btnAddTarea.TabIndex = 0;
             this.btnAddTarea.Text = "Añadir";
             this.btnAddTarea.UseVisualStyleBackColor = true;
+            this.btnAddTarea.Click += new System.EventHandler(this.btnAddTarea_Click);
             // 
             // btnUpdTarea
             // 
@@ -61,12 +62,15 @@
             this.btnDelTarea.TabIndex = 2;
             this.btnDelTarea.Text = "Borrar";
             this.btnDelTarea.UseVisualStyleBackColor = true;
+            this.btnDelTarea.Click += new System.EventHandler(this.btnDelTarea_Click);
             // 
             // dgvTarea
             // 
             this.dgvTarea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTarea.Location = new System.Drawing.Point(13, 43);
             this.dgvTarea.Name = "dgvTarea";
+            this.dgvTarea.ReadOnly = true;
+            this.dgvTarea.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTarea.Size = new System.Drawing.Size(412, 206);
             this.dgvTarea.TabIndex = 3;
             // 

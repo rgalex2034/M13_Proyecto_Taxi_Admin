@@ -66,14 +66,27 @@
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Tareas\NewTareaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tareas\NewTareaForm.Designer.cs">
+      <DependentUpon>NewTareaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Tareas\TareasForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Tareas\TareasForm.Designer.cs">
       <DependentUpon>TareasForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Tareas\UpdateTareaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Tareas\UpdateTareaForm.Designer.cs">
+      <DependentUpon>UpdateTareaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\DAO\TareaDAO.cs" />
     <Compile Include="Model\DAO\UsuarioDAO.cs" />
+    <Compile Include="Model\DAO\ZonaDAO.cs" />
     <Compile Include="Model\EntityFramework\Coche.cs">
       <DependentUpon>TaxistaModel.tt</DependentUpon>
     </Compile>
@@ -109,10 +122,14 @@
     </Compile>
     <Compile Include="Model\Services\ServicioTarea.cs" />
     <Compile Include="Model\Services\ServicioUsuario.cs" />
+    <Compile Include="Model\Services\ServicioZona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Tareas\NewTareaForm.resx">
+      <DependentUpon>NewTareaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tareas\TareasForm.resx">
       <DependentUpon>TareasForm.cs</DependentUpon>
@@ -150,7 +167,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Model\EntityFramework\TaxistaModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

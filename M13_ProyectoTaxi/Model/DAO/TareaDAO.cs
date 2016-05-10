@@ -54,6 +54,7 @@ namespace M13_ProyectoTaxi.Model.DAO
             if (tarea != null)
             {
                 db.Tarea.Remove(tarea);
+                db.SaveChanges();
                 return true;
             }
             return false;

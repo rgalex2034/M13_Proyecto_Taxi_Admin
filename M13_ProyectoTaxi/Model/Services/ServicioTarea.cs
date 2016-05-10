@@ -15,5 +15,35 @@ namespace M13_ProyectoTaxi.Model.Services
             TareaDAO dao = new TareaDAO();
             return dao.obtenerListaTarea();
         }
+
+        public static int addTarea(Tarea t)
+        {
+            TareaDAO dao = new TareaDAO();
+            dao.addTarea(t);
+            return t.id;
+        }
+
+        public static int addTarea(string telefono, string nombre, string direccion, string nombreZona)
+        {
+            ZonaDAO zonaDao = new ZonaDAO();
+            TareaDAO tareaDAO = new TareaDAO();
+
+            Zona z = zonaDao.obtenerZonaPorNombre(nombreZona);
+            Tarea t = new Tarea();
+            t.nombre = nombre;
+            t.telefono = telefono;
+            t.direccion = direccion;
+            t.FK_ZonaId = z.id;
+
+            tareaDAO.addTarea(t);
+            return t.id;
+        }
+
+        public static bool borrarTarea(int id)
+        {
+            TareaDAO dao = new TareaDAO();
+            return dao.borrarTarea(id);
+        }
+
     }
 }
