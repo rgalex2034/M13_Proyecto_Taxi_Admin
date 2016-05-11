@@ -60,6 +60,12 @@
     <Compile Include="Forms\BasicForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\CrudForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CrudForm.Designer.cs">
+      <DependentUpon>CrudForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,12 +83,6 @@
     </Compile>
     <Compile Include="Forms\Tareas\TareasForm.Designer.cs">
       <DependentUpon>TareasForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Tareas\UpdateTareaForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Tareas\UpdateTareaForm.Designer.cs">
-      <DependentUpon>UpdateTareaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\DAO\TareaDAO.cs" />
     <Compile Include="Model\DAO\UsuarioDAO.cs" />
@@ -125,6 +125,9 @@
     <Compile Include="Model\Services\ServicioZona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\CrudForm.resx">
+      <DependentUpon>CrudForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

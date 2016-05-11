@@ -12,20 +12,20 @@ using M13_ProyectoTaxi.Model.EntityFramework;
 
 namespace M13_ProyectoTaxi.Forms.Tareas
 {
-    public partial class TareasForm : BasicForm
+    public partial class TareasForm : CrudForm
     {
         public TareasForm()
         {
             InitializeComponent();
-            refreshTareas();
+            refreshData();
         }
 
-        private void refreshTareas()
+        protected override void refreshData()
         {
-            dgvTarea.DataSource = ServicioTarea.obtenerListaTareas();
+            dgvInfo.DataSource = ServicioTarea.obtenerListaTareas();
         }
 
-        private void btnAddTarea_Click(object sender, EventArgs e)
+        protected override void btnAddElement_Click(object sender, EventArgs e)
         {
             NewTareaForm newTareaForm = new NewTareaForm();
             newTareaForm.FormClosed += NewTareaClosed;
@@ -34,13 +34,13 @@ namespace M13_ProyectoTaxi.Forms.Tareas
 
         private void NewTareaClosed(object sender, FormClosedEventArgs e)
         {
-            this.refreshTareas();
+            this.refreshData();
         }
 
-        private void btnDelTarea_Click(object sender, EventArgs e)
+        protected override void btnDelElement_Click(object sender, EventArgs e)
         {
             string err = "";
-            foreach (DataGridViewRow row in dgvTarea.SelectedRows)
+            foreach (DataGridViewRow row in dgvInfo.SelectedRows)
             {
                 foreach (DataGridViewCell cell in row.Cells)
                 {
@@ -57,16 +57,16 @@ namespace M13_ProyectoTaxi.Forms.Tareas
                 MessageBox.Show("Error borando tareas:\nIDs: " + err);
             }
 
-            refreshTareas();
+            refreshData();
 
         }
 
-        private void btnUpdTarea_Click(object sender, EventArgs e)
+        protected override void btnUpdElement_Click(object sender, EventArgs e)
         {
-            if (dgvTarea.SelectedRows.Count == 1)
+            if (dgvInfo.SelectedRows.Count == 1)
             {
                 int idTarea = -1;
-                foreach(DataGridViewRow row in dgvTarea.SelectedRows)
+                foreach(DataGridViewRow row in dgvInfo.SelectedRows)
                 {
                     foreach(DataGridViewCell cell in row.Cells)
                     {
