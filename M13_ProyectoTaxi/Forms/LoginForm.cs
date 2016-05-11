@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using M13_ProyectoTaxi.Model.EntityFramework;
 using M13_ProyectoTaxi.Model.Services;
 using M13_ProyectoTaxi.Forms.Tareas;
+using M13_ProyectoTaxi.Forms.Zonas;
 
 namespace M13_ProyectoTaxi.Forms
 {

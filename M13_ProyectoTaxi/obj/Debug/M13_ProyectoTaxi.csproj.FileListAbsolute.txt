@@ -7,10 +7,10 @@ C:\Users\Alex\Documents\Visual Studio 2015\Projects\M13_Proyecto_Taxi_Admin\M13_
 C:\Users\Alex\Documents\Visual Studio 2015\Projects\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Alex\Documents\Visual Studio 2015\Projects\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.csprojResolveAssemblyReference.cache
 C:\Users\Alex\Documents\Visual Studio 2015\Projects\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.Forms.LoginForm.resources
-C:\Users\Alex\Documents\Visual Studio 2015\Projects\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.Forms.Tareas.NewTareaForm.resources
 C:\Users\Alex\Documents\Visual Studio 2015\Projects\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.Forms.Tareas.TareasForm.resources
 C:\Users\Alex\Documents\Visual Studio 2015\Projects\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.Properties.Resources.resources
 C:\Users\Alex\Documents\Visual Studio 2015\Projects\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.csproj.GenerateResource.Cache
 C:\Users\Alex\Documents\Visual Studio 2015\Projects\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.exe
 C:\Users\Alex\Documents\Visual Studio 2015\Projects\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.pdb
 C:\Users\Alex\Documents\Visual Studio 2015\Projects\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.Forms.CrudForm.resources
+C:\Users\Alex\Documents\Visual Studio 2015\Projects\M13_Proyecto_Taxi_Admin\M13_ProyectoTaxi\obj\Debug\M13_ProyectoTaxi.Forms.Tareas.TareaEditForm.resources

@@ -15,6 +15,7 @@ namespace M13_ProyectoTaxi.Forms
         public CrudForm()
         {
             InitializeComponent();
+            refreshData();
         }
 
         protected abstract void refreshData();

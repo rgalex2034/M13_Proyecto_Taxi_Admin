@@ -1,6 +1,6 @@
 ﻿namespace M13_ProyectoTaxi.Forms.Tareas
 {
-    partial class NewTareaForm
+    partial class TareaEditForm
     {
         /// <summary>
         /// Required designer variable.

@@ -17,7 +17,6 @@ namespace M13_ProyectoTaxi.Forms.Tareas
         public TareasForm()
         {
             InitializeComponent();
-            refreshData();
         }
 
         protected override void refreshData()
@@ -27,7 +26,7 @@ namespace M13_ProyectoTaxi.Forms.Tareas
 
         protected override void btnAddElement_Click(object sender, EventArgs e)
         {
-            NewTareaForm newTareaForm = new NewTareaForm();
+            TareaEditForm newTareaForm = new TareaEditForm();
             newTareaForm.FormClosed += NewTareaClosed;
             newTareaForm.ShowDialog();
         }
@@ -76,7 +75,7 @@ namespace M13_ProyectoTaxi.Forms.Tareas
                 }
                 Tarea t = ServicioTarea.obtenerTarea(idTarea);
 
-                NewTareaForm updForm = new NewTareaForm(t);
+                TareaEditForm updForm = new TareaEditForm(t);
                 updForm.FormClosed += NewTareaClosed;
                 updForm.ShowDialog();
 

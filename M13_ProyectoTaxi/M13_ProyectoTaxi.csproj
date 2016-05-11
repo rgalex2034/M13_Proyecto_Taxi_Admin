@@ -72,17 +72,23 @@
     <Compile Include="Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Tareas\NewTareaForm.cs">
+    <Compile Include="Forms\Tareas\TareaEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Tareas\NewTareaForm.Designer.cs">
-      <DependentUpon>NewTareaForm.cs</DependentUpon>
+    <Compile Include="Forms\Tareas\TareaEditForm.Designer.cs">
+      <DependentUpon>TareaEditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Tareas\TareasForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Tareas\TareasForm.Designer.cs">
       <DependentUpon>TareasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Zonas\ZonasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Zonas\ZonasForm.Designer.cs">
+      <DependentUpon>ZonasForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\DAO\TareaDAO.cs" />
     <Compile Include="Model\DAO\UsuarioDAO.cs" />
@@ -131,8 +137,8 @@
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Tareas\NewTareaForm.resx">
-      <DependentUpon>NewTareaForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Tareas\TareaEditForm.resx">
+      <DependentUpon>TareaEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tareas\TareasForm.resx">
       <DependentUpon>TareasForm.cs</DependentUpon>
@@ -182,6 +188,7 @@
       <LastGenOutput>TaxistaModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

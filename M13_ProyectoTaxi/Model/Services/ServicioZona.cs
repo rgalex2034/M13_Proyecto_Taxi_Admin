@@ -41,5 +41,18 @@ namespace M13_ProyectoTaxi.Model.Services
             Zona zona = dao.obtenerZona(id);
             return zona;
         }
+
+        public static bool borrarZona(int id)
+        {
+            ZonaDAO dao = new ZonaDAO();
+            return dao.eliminarZona(id);
+        }
+
+        public static bool borrarZona(string nombre)
+        {
+            ZonaDAO dao = new ZonaDAO();
+            return dao.eliminarZonaPorNombre(nombre);
+        }
+
     }
 }

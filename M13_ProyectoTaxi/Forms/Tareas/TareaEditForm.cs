@@ -12,18 +12,18 @@ using M13_ProyectoTaxi.Model.EntityFramework;
 
 namespace M13_ProyectoTaxi.Forms.Tareas
 {
-    public partial class NewTareaForm : BasicForm
+    public partial class TareaEditForm : BasicForm
     {
 
         private Tarea tarea;
 
-        public NewTareaForm()
+        public TareaEditForm()
         {
             InitializeComponent();
             cmbxZona.DataSource = ServicioZona.obtenerListaNombres();
             tarea = null;
         }
-        public NewTareaForm(Tarea t)
+        public TareaEditForm(Tarea t)
         {
             InitializeComponent();
             cmbxZona.DataSource = ServicioZona.obtenerListaNombres();
